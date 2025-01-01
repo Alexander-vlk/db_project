@@ -11,3 +11,4 @@ django-environ
 mypy
 ruff
 pre-commit
+django-stubs
