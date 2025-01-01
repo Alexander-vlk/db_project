@@ -1,0 +1,12 @@
+asgiref
+Django
+Pillow
+sqlparse
+pymemcache
+django-debug-toolbar
+redis
+djangorestframework
+requests
+django-environ
+mypy
+ruff
