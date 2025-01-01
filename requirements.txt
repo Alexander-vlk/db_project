@@ -10,3 +10,4 @@ requests
 django-environ
 mypy
 ruff
+pre-commit
