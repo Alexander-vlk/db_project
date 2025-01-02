@@ -12,3 +12,4 @@ mypy
 ruff
 pre-commit
 django-stubs
+gunicorn
