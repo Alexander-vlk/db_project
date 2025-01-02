@@ -11,17 +11,17 @@ services:
     env_file:
       - ./hotel/hotel/.env
     depends_on:
-      - db
+      - db  
       - neo4j
   
   db:
-    image: postgres:15
+    image: postgres:14
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql@14/data
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=1234
-      - POSTGRES_DB=postgres
+      - POSTGRES_DB=hotel
 
   neo4j:
     image: neo4j:latest
