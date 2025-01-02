@@ -1,1 +1,24 @@
 {% extends "base.html" %}
+
+{% block title %}
+Выход успешен
+{% endblock title %}
+
+{% block content %}
+<section class="vh-100">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card bg-dark text-white" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+  
+                <h4>Вы успешно вышли. <a href="{% url 'login' %}" class="text-white-50 fw-bold">Войти снова</a></h4>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock content %}
+
