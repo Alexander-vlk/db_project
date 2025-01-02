@@ -12,7 +12,7 @@
           <div class="card bg-dark text-white" style="border-radius: 1rem;">
             <div class="card-body p-5 text-center">
   
-              <form class="mb-md-5 mt-md-4 pb-5" method='POST' action="{% url 'login' %}">
+              <form class="mb-md-5 mt-md-4 pb-5" method='POST'>
                 {% csrf_token %}
   
                 <h2 class="fw-bold mb-2 text-uppercase">Регистрация</h2>
@@ -30,14 +30,17 @@
                   {{ form.password2 }}
                 </div>
   
-                <input class="btn btn-outline-light btn-lg px-5" type="submit" value='Войти'>
+                <input class="btn btn-outline-light btn-lg px-5" type="submit" value='Зарегистрироваться'>
   
             </form>
-  
-              <div>
-                <p class="mb-0">Уже есть аккаунт? <a href="{% url 'login' %}" class="text-white-50 fw-bold">Войти</a>
-                </p>
-              </div>
+
+            <div class=''>
+                {{ form.errors }}
+            </div>
+            
+            <div>
+                <p class="mb-0">Уже есть аккаунт? <a href="{% url 'login' %}" class="text-white-50 fw-bold">Войти</a></p>
+            </div>
   
             </div>
           </div>
