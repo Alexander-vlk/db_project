@@ -12,6 +12,7 @@ services:
       - ./hotel/hotel/.env
     depends_on:
       - db
+      - neo4j
   
   db:
     image: postgres:15
@@ -21,5 +22,14 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=1234
       - POSTGRES_DB=postgres
+
+  neo4j:
+    image: neo4j:latest
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    environment:
+      NEO4J_AUTH: neo4j/neopass_1234_test_project
+
 volumes:
   postgres_data:

@@ -13,3 +13,5 @@ ruff
 pre-commit
 django-stubs
 gunicorn
+neo4j
+neomodel
