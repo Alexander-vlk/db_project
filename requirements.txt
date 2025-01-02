@@ -15,3 +15,4 @@ django-stubs
 gunicorn
 neo4j
 neomodel
+psycopg2
