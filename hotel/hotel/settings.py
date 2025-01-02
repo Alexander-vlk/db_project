@@ -13,6 +13,8 @@ DEBUG = bool(env('DEBUG'))
 ALLOWED_HOSTS: list[str] = env('ALLOWED_HOSTS').split(',')
 
 INSTALLED_APPS = [
+    'auth_service.apps.AuthServiceConfig',
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
