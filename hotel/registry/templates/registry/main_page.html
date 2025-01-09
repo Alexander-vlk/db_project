@@ -1,10 +1,79 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% block title %}
 ЧетыреВаго - отдых по доступной цене для каждого!
 {% endblock title %}
 
 {% block content %}
-
+<div class="container bg-white p-5 jumbotron">
+    <div class="container">
+      <h1 class="display-3">Хороший отдых - только с ЧетыреВаго!</h1>
+      <p><span class='text-primary'>Отель ЧетыреВаго —</span> это уютный горный отель, где гармонично сочетаются комфорт, живописные пейзажи и возможности для активного отдыха и полного расслабления.</p>
+      <p><a class="btn btn-primary btn-lg" href="{% url 'about' %}" role="button">Узнать больше</a></p>
+    </div>
+  </div>
+  <div class="container bg-white p-5 my-5 featurette d-flex align-items-center">
+    <div class="col-md-7">
+      <h2 class="featurette-heading">Лучшие номера в горах. <span class="text-muted">Это прекрасно</span></h2>
+      <p class="lead">Мы подготовили лучшие условия, чтобы Ваш отдых был незабываемым.</p>
+    </div>
+    <div class="col-md-5">
+      <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="{% static 'main.jpg' %}" data-holder-rendered="true" style="width: 500px; height: 500px;">
+    </div>
+  </div>
+  <div class="container my-5">
+    <div class="booking-container">
+        <!-- Фотография -->
+        <img src="{% static 'form.jpg' %}" alt="Отель Четыреваго" class="booking-image">
+        
+        <!-- Форма -->
+        <div class="booking-form">
+            <h4 class="text-center mb-3">Забронируйте номер</h4>
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Имя</label>
+                    <input type="text" class="form-control" id="name" placeholder="Ваше имя" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Ваш email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="checkin" class="form-label">Дата заезда</label>
+                    <input type="date" class="form-control" id="checkin" required>
+                </div>
+                <div class="mb-3">
+                    <label for="checkout" class="form-label">Дата выезда</label>
+                    <input type="date" class="form-control" id="checkout" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Забронировать</button>
+            </form>
+        </div>
+    </div>
+</div>
+<style>
+    .booking-container {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .booking-image {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+    .booking-form {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+</style>
 {% endblock content %}
 
