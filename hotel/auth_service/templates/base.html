@@ -12,7 +12,9 @@
 </head>
 <body class='vh-100 gradient-custom'>
     <header>
-
+        <h1>Отель ЧетыреВаго</h1>
+        {% block header %}
+        {% endblock header %}
     </header>
     
     <main>
@@ -27,7 +29,8 @@
     </main>
 
     <footer>
-
+        {% block footer %}
+        {% endblock footer %}
     </footer>
 
     {% block js %}
