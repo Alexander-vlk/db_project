@@ -8,5 +8,7 @@ urlpatterns = [
     
     path('auth/', include('auth_service.urls')),
     
+    path('', include('registry.urls')),
+    
     path('admin/', admin.site.urls),
 ]
